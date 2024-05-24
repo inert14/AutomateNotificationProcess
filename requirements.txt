@@ -1,7 +1,3 @@
---upgrade 
-google-api-python-client 
-google-auth-httplib2 
-google-auth-oauthlib
 selenium 
 schedule 
 pandas
@@ -9,3 +5,7 @@ datetime
 pytz
 time
 pathlib
+--upgrade 
+google-api-python-client 
+google-auth-httplib2 
+google-auth-oauthlib
