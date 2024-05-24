@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 # Path to the ChromeDriver executable
@@ -13,7 +14,7 @@ CHROMEDRIVER_PATH = 'path/to/chromedriver'
 # Function to send a message using the browser session with Selenium
 def send_message(phone_no, message):
     script_directory = pathlib.Path().absolute()
-    service = Service()  # Update with the path '/path/to/chromedriver' when hosting
+    service = Service(ChromeDriverManager().install())  # Update with the path '/path/to/chromedriver' when hosting
     options = webdriver.ChromeOptions()
     options.add_argument(f"user-data-dir={script_directory}\\userdata")  # Use saved session data
     driver = webdriver.Chrome(service=service, options=options)
@@ -26,7 +27,7 @@ def send_message(phone_no, message):
 
      # Wait until the send button is present
     try:
-        WebDriverWait(driver, 20).until(
+        WebDriverWait(driver, 60).until(
             EC.presence_of_element_located((By.XPATH, '//button[@data-tab="11"]'))
         )
     except TimeoutException:
