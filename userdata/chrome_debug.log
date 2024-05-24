@@ -1,0 +1,20 @@
+[26024:29640:0524/022541.733:WARNING:chrome_main_delegate.cc(750)] This is Chrome version 124.0.6367.210 (not a warning)
+[26024:29640:0524/022541.793:INFO:chrome_browser_cloud_management_controller.cc(168)] Starting CBCM Controller Initialization
+[26024:29640:0524/022541.793:INFO:chrome_browser_cloud_management_controller.cc(196)] No machine level policy manager exists.
+[26024:29640:0524/022541.810:WARNING:browser_management_service.cc(128)] EnterpriseLogoUrl fetch failed with error code -1 and MIME type 
+[25944:8716:0524/022541.897:WARNING:runtime_features.cc(730)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[7076:16664:0524/022541.901:WARNING:runtime_features.cc(730)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[18616:14388:0524/022542.143:WARNING:runtime_features.cc(730)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[28880:22664:0524/022542.259:WARNING:runtime_features.cc(730)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[26024:29640:0524/022542.519:INFO:CONSOLE(132)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v3/yw/r/L7Zl-xj6klg.js?_nc_x=Ij3Wp8lg5Kz (132)
+[26024:29640:0524/022542.552:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'attribution-reporting'.", source:  (0)
+[26024:29640:0524/022542.552:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'battery'.", source:  (0)
+[26024:29640:0524/022542.552:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'compute-pressure'.", source:  (0)
+[26024:29640:0524/022542.552:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.", source:  (0)
+[26024:29640:0524/022542.552:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'shared-storage'.", source:  (0)
+[26024:29640:0524/022542.552:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'shared-storage-select-url'.", source:  (0)
+[26024:29640:0524/022542.552:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'usb-unrestricted'.", source:  (0)
+[26024:29640:0524/022550.866:INFO:CONSOLE(132)] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v3/yw/r/L7Zl-xj6klg.js?_nc_x=Ij3Wp8lg5Kz (132)
+[13528:26128:0524/022553.078:WARNING:sqlite_persistent_store_backend_base.cc(198)] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:247 to client_task_runner_.
+[13528:26128:0524/022553.078:WARNING:sqlite_persistent_store_backend_base.cc(198)] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:247 to client_task_runner_.
+[26024:29640:0524/022553.159:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

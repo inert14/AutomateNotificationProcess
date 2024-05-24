@@ -1,0 +1,23 @@
+2024/05/24-02:25:42.526 71e8 Reusing MANIFEST D:\Mitesh\GymNotification\userdata\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/05/24-02:25:42.527 71e8 Recovering log #336
+2024/05/24-02:25:42.540 71e8 Reusing old log D:\Mitesh\GymNotification\userdata\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000336.log 
+2024/05/24-02:25:43.793 6b44 Manual compaction at level-0 from '\x00A\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00B\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/05/24-02:25:49.374 71e8 Level-0 table #346: started
+2024/05/24-02:25:49.385 71e8 Level-0 table #346: 1016247 bytes OK
+2024/05/24-02:25:49.385 71e8 Delete type=0 #336
+2024/05/24-02:25:49.392 71e8 Compacting 1@1 + 6@2 files
+2024/05/24-02:25:49.426 71e8 Generated table #347@1: 47474 keys, 2214176 bytes
+2024/05/24-02:25:49.449 71e8 Generated table #348@1: 27579 keys, 2188641 bytes
+2024/05/24-02:25:49.461 71e8 Generated table #349@1: 3198 keys, 2159622 bytes
+2024/05/24-02:25:49.494 71e8 Generated table #350@1: 38249 keys, 2250861 bytes
+2024/05/24-02:25:49.519 71e8 Generated table #351@1: 44763 keys, 2190635 bytes
+2024/05/24-02:25:49.556 71e8 Generated table #352@1: 100624 keys, 2088971 bytes
+2024/05/24-02:25:49.557 71e8 Compacted 1@1 + 6@2 files => 13092906 bytes
+2024/05/24-02:25:49.557 71e8 compacted to: files[ 0 0 6 0 0 0 0 ]
+2024/05/24-02:25:49.557 71e8 Delete type=2 #338
+2024/05/24-02:25:49.557 71e8 Delete type=2 #339
+2024/05/24-02:25:49.557 71e8 Delete type=2 #340
+2024/05/24-02:25:49.557 71e8 Delete type=2 #341
+2024/05/24-02:25:49.558 71e8 Delete type=2 #342
+2024/05/24-02:25:49.558 71e8 Delete type=2 #343
+2024/05/24-02:25:49.558 71e8 Delete type=2 #346
