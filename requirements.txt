@@ -1,0 +1,14 @@
+pip install selenium 
+pip install schedule 
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+pip install pandas
+pip install datetime
+pip install pytz
+pip install time
+pip install schedule
+pip install pathlib
+pip install time
+pip install 
+pip install
+pip install
+pip install
