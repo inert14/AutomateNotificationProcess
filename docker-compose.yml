@@ -1,0 +1,9 @@
+services:
+  # Service for the Gym Notification application
+  gym-notification:
+    build: .
+    ports:
+      - "5000:5000"  # Map port 5000 on host to port 5000 on container
+    # entrypoint: ["/bin/bash", "-c", "gunicorn -w 1 --bind 0.0.0.0:5000 InitialWhatsappLogin:app --timeout 120"]
+    entrypoint: ["/bin/bash", "-c", "gunicorn -k AutomateNotificationProcess.CustomGeventWorker AutomateNotificationProcess:app"]
+

@@ -1,4 +1,5 @@
 import pathlib
+import platform
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 import time
@@ -11,7 +12,11 @@ def initial_login():
     script_directory = pathlib.Path().absolute()
     service = Service(ChromeDriverManager().install())  # Update with the path '/path/to/chromedriver' when hosting
     options = webdriver.ChromeOptions()
-    options.add_argument(f"user-data-dir={script_directory}\\userdata")  # Save session data
+    if platform.system() == "Windows":
+        user_data_dir = f"user-data-dir={script_directory}\\userdata"
+    else:
+        user_data_dir = f"user-data-dir={script_directory}/userdata"
+    options.add_argument(user_data_dir)  # Save session data
     driver = webdriver.Chrome(service=service, options=options)
 
     driver.get('https://web.whatsapp.com')

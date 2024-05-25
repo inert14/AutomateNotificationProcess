@@ -1,4 +1,5 @@
 import pathlib
+import platform
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -16,7 +17,11 @@ def send_message(phone_no, message):
     script_directory = pathlib.Path().absolute()
     service = Service(ChromeDriverManager().install())  # Update with the path '/path/to/chromedriver' when hosting
     options = webdriver.ChromeOptions()
-    options.add_argument(f"user-data-dir={script_directory}\\userdata")  # Use saved session data
+    if platform.system() == "Windows":
+        user_data_dir = f"user-data-dir={script_directory}\\userdata"
+    else:
+        user_data_dir = f"user-data-dir={script_directory}/userdata"
+    options.add_argument(user_data_dir) # Use saved session data
     driver = webdriver.Chrome(service=service, options=options)
     
     # Directly interact with the page to send the message
@@ -27,7 +32,7 @@ def send_message(phone_no, message):
 
      # Wait until the send button is present
     try:
-        WebDriverWait(driver, 60).until(
+        WebDriverWait(driver, 120).until(
             EC.presence_of_element_located((By.XPATH, '//button[@data-tab="11"]'))
         )
     except TimeoutException:
