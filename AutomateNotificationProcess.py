@@ -95,7 +95,7 @@ def qualify_members():
 
 class CustomGeventWorker(GeventWorker):
     def run(self):
-        scheduler.add_job(qualify_members, 'cron', hour=2, minute=5)
+        scheduler.add_job(qualify_members, 'cron', hour=1, minute=00)
         scheduler.start()
         super().run()
 
