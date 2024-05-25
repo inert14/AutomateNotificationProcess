@@ -2,11 +2,11 @@ from gevent import monkey
 monkey.patch_all()
 
 from datetime import datetime
+from dotenv import load_dotenv
 from datetime import timedelta
 from pytz import timezone 
 import pandas as pd
-import time
-import schedule
+import os
 import ReadDateFromGoogleSheets as rdfgs
 import SendWhatsappWithSelenium as swws
 from flask import Flask
@@ -16,9 +16,8 @@ from gunicorn.workers.ggevent import GeventWorker
 app = Flask(__name__)
 scheduler = BackgroundScheduler(timezone="Asia/Kolkata") 
 
-# Schedule the message sending
-def schedule_message(phone_number, message, hour, minute):
-    schedule.every().day.at(f"{hour:02d}:{minute:02d}").do(swws.send_message, phone_number, message)
+# Load environment variables from .env file(local) Comment while hosting
+# load_dotenv()
 
 # Send message to the qualified members
 def send_message_to_qualified_members(message, df_date):
@@ -26,7 +25,6 @@ def send_message_to_qualified_members(message, df_date):
     for row in df_date.itertuples():
         phone_nbr_string = "+91" + row.Phone_Number
         phone_number =  int(phone_nbr_string)
-        # schedule_message(phone_number, message, hour, minute)
         swws.send_message(phone_number, message)
 
 @app.route('/')
@@ -95,7 +93,7 @@ def qualify_members():
 
 class CustomGeventWorker(GeventWorker):
     def run(self):
-        scheduler.add_job(qualify_members, 'cron', hour=1, minute=00)
+        scheduler.add_job(qualify_members, 'cron', hour=os.getenv("HOUR"), minute=os.getenv("MINUTE"))
         scheduler.start()
         super().run()
 

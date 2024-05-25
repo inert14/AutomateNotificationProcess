@@ -4,6 +4,10 @@ FROM python:3.9-slim
 # Set environment variables to reduce the output of debconf
 ENV DEBIAN_FRONTEND=noninteractive
 
+# Set the hour and minute for scheduling
+ENV HOUR=2
+ENV MINUTE=30
+
 # Install necessary dependencies
 RUN apt-get update && \
     apt-get install -y \

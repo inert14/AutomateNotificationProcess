@@ -4,3 +4,5 @@ token.json
 /venv
 /__pycache__
 /userdata
+instructions.txt
+.env
