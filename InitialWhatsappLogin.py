@@ -38,18 +38,19 @@ def initial_login():
         user_data_dir = f"user-data-dir={script_directory}\\userdata"
     else:
         user_data_dir = f"user-data-dir={script_directory}/userdata"
-    options.add_argument(user_data_dir)  # Save session data
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
+    options.add_argument("--disable-software-rasterizer")
     options.add_argument("--disable-setuid-sandbox")
     options.add_argument("--remote-debugging-port=9222")
     options.add_argument("--window-size=1920,1080")
+    options.add_argument(user_data_dir)  # Save session data
     driver = webdriver.Chrome(service=service, options=options)
 
     driver.get('https://web.whatsapp.com')
-    
+
     # Click on "Link with phone number"
     xpath_login_button = '//span[@tabindex="0"]'
     find_element_exists(driver, xpath_login_button)
