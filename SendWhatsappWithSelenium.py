@@ -37,7 +37,6 @@ def send_message(phone_no, message):
         url = f'https://web.whatsapp.com/send?phone={phone_no}&text={message}'
         print(url)
         driver.get(url)
-        
         # Wait until the send button is present
         try:
             WebDriverWait(driver, 120).until(
@@ -49,6 +48,7 @@ def send_message(phone_no, message):
             return
 
         send_button = driver.find_element(By.XPATH, '//button[@data-tab="11"]')
+        time.sleep(5)
         send_button.click()
         
         time.sleep(5)  # Wait to ensure the message is sent
